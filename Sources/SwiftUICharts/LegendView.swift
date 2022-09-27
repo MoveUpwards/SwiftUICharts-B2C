@@ -15,14 +15,14 @@ struct LegendView: View {
     }
 
     var body: some View {
-        LazyVGrid(columns: [.init(.adaptive(minimum: 100))], alignment: .leading) {
+        LazyVGrid(columns: [.init(.adaptive(minimum: 150))], alignment: .leading) {
             ForEach(legends, id: \.color) { legend in
                 HStack(alignment: .center) {
                     Circle()
                         .fill(legend.color)
                         .frame(width: 16, height: 16)
 
-                    Text(legend.label)
+                    Text(legend.label).lineLimit(1)
                 }
             }
         }

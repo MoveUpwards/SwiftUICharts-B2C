@@ -19,7 +19,7 @@ struct BarsView: View {
         static let limitHeight: CGFloat = 4
 
         static func spacing(for count: Int) -> CGFloat {
-            return count > 40 ? 0 : 2
+            return count > 40 ? 0 : 40
         }
 
         static func limitMin(for sizeCategory: ContentSizeCategory) -> CGFloat {
